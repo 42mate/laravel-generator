@@ -151,7 +151,7 @@ class ModelGenerator extends BaseGenerator
                 return 'string';
             case '1t1':
             case 'mt1':
-                return camel_case($relation->inputs[1].' '.camel_case($relation->inputs[1]));
+                return camel_case($relation->inputs[0].' '.camel_case($relation->inputs[0]));
             case '1tm':
                 return '\Illuminate\Database\Eloquent\Collection'.' '.$relation->inputs[0];
             case 'mtm':
